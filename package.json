@@ -1,0 +1,51 @@
+{
+  "name": "rocket-league-rank-apis-client",
+  "version": "0.1.0",
+  "description": "Client for pulling data from various rocket league rank apis",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src -s -D -d dist --ignore node_modules",
+    "lint": "eslint src test",
+    "lint:staged": "lint-staged",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist/"
+  ],
+  "lint-staged": {
+    "*.js": "lint"
+  },
+  "pre-commit": "lint:staged",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugogrochau/rocket-league-rank-apis-client.git"
+  },
+  "author": "Hugo Grochau <hugo@grochau.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "lint-staged": "^3.2.8",
+    "nodemon": "^1.11.0",
+    "pre-commit": "^1.2.2"
+  },
+  "keywords": [
+    "api",
+    "tracker",
+    "rocket",
+    "league",
+    "rank",
+    "ranks"
+  ]
+}
