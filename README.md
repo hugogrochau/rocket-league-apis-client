@@ -1,5 +1,5 @@
-# rocket-league-rank-apis-client
-Client for pulling data from various rocket league rank apis
+# rocket-league-apis-client
+Client for pulling data from various rocket league apis
 
 # Usage
 ```js
