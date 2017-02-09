@@ -6,8 +6,9 @@ Client for pulling data from various rocket league apis
 import rankApis, { TRACKERS } from 'rocket-league-rank-apis-client'
 
 const API_KEY;
-
-rankApis.getPlayerInformation(0, 'freedomrl', API_KEY, TRACKERS.RLTRACKER_PRO)
+const platform = 0; // 0 = steam, 1 = ps4, 2 = xbox
+const id = 'freedomrl'; // steam vanity id, STEAM64 id, or xbox/ps4 handle
+rankApis.getPlayerInformation(platform, id, API_KEY, TRACKERS.RLTRACKER_PRO)
 ```
 
 # Supported trackers
