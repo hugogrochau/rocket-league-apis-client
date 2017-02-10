@@ -1,4 +1,4 @@
-import RLTrackerPro from '../rltracker-pro';
+import RLTrackerPro, { formatResponse } from '../rltracker-pro';
 import mockResponse from './mocks/rltracker-pro-response.mock.json';
 import formattedInformation from './mocks/rltracker-pro-formatted-information.mock.json';
 
@@ -24,7 +24,7 @@ describe('rltracker.pro', () => {
 
   describe('formatResponse', () => {
     it('Should properly format the response', () =>
-      expect(RLTrackerPro.formatResponse(mockResponse)).to.deep.equal(formattedInformation)
+      expect(formatResponse(mockResponse)).to.deep.equal(formattedInformation)
     );
   });
 });

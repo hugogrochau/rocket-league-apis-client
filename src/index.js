@@ -1,4 +1,4 @@
-import { getInformation } from './external-actions';
+import { getInformation } from './requests';
 import RocketLeagueTrackerNetwork from './sources/rocket-league-tracker-network';
 import RLTrackerPro from './sources/rltracker-pro';
 

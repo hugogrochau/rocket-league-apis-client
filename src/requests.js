@@ -9,15 +9,10 @@ export const getInformation = (source, apiUrl, apiKey, platform, id) => {
   return new Promise((resolve, reject) => {
     fetch(url, options)
       .then((res) => {
-        if (res.status >= 400) {
-          return reject({ response: res, message: res.statusText });
-        }
-        try {
-          resolve(res.json());
-        } catch (err) {
-          reject({ response: res, message: res.statusText });
-        }
+        source.handleResponse(res)
+          .then((formattedRes) => resolve(formattedRes))
+          .catch((err) => reject(err));
       })
-      .then((jsonData) => source.formatResponse(jsonData)).catch((err) => { reject({ err, message: 'Unknown Error' }); });
+      .catch((err) => reject({ data: err, message: 'ServerError' }));
   });
 };

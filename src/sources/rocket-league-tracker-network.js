@@ -55,15 +55,30 @@ const createRequest = (apiUrl, apiKey, platform, id) => {
     platform: 3 - platform,
     name: id,
   };
-  const headers = [{ 'X-API-KEY': apiKey }];
+  const headers = { 'X-API-KEY': apiKey };
   return { url: apiUrl, query, headers };
 };
 
-const formatResponse = (data) => {
+const handleResponse = (res) =>
+  new Promise((resolve, reject) => {
+    res.text()
+      .then((data) => {
+        if (data === 'Bad Request') return reject({ message: 'InputError' });
+        try {
+          const jsonData = JSON.parse(data);
+          resolve(formatResponse(jsonData));
+        } catch (e) {
+          reject({ data, message: 'UnknownError' });
+        }
+      })
+      .catch((err) => reject({ data: err, message: 'UnknownError' }));
+  });
+
+export const formatResponse = (data) => {
   const info = getRanksFromInformation(data.stats);
   info.name = data.platformUserHandle;
   info.id = data.platformUserId;
   return info;
 };
 
-export default { createRequest, formatResponse };
+export default { createRequest, handleResponse };

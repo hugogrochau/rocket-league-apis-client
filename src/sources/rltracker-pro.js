@@ -1,6 +1,5 @@
 import toPairs from 'lodash/toPairs';
 
-
 const playlistMap = {
   10: '1v1',
   11: '2v2',
@@ -31,11 +30,17 @@ const createRequest = (apiUrl, apiKey, platform, id) => {
   return { url: apiUrl, query };
 };
 
-const formatResponse = (data) => {
+const handleResponse = (res) =>
+  res.json()
+    .then((data) => formatResponse(data))
+    .catch((err) => ({ data: err, message: 'UnknownError' }));
+
+
+export const formatResponse = (data) => {
   const info = formatRanks(data.ranking);
   info.name = data.player.nickname;
   info.id = data.player.player_id;
   return info;
 };
 
-export default { createRequest, formatResponse };
+export default { createRequest, handleResponse };
