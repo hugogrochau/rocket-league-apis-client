@@ -18,7 +18,7 @@ const trackers = {
 };
 
 export default (options) => {
-  if (!options && !options.apiKey) {
+  if (!options || !options.apiKey) {
     throw new Error('You must provide an apiKey');
   }
 
