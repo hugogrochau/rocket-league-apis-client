@@ -3,6 +3,7 @@ Client for pulling data from various rocket league apis
 
 [![NPM Version](https://img.shields.io/npm/v/rocket-league-apis-client.svg)](https://www.npmjs.com/package/rocket-league-apis-client)
 [![License](https://img.shields.io/github/license/hugogrochau/rocket-league-apis-client.svg)](https://github.com/hugogrochau/rocket-league-apis-client/blob/master/LICENSE)
+[![Dependency Status](https://www.versioneye.com/user/projects/589e01146a7781003a57a14f/badge.svg)](https://www.versioneye.com/user/projects/589e01146a7781003a57a14f)
 
 # Usage
 ```js
