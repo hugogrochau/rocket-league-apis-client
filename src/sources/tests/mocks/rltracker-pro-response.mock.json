@@ -1,0 +1,62 @@
+{
+  "error": {},
+  "player": {
+    "id": 200,
+    "nickname": "Freedom",
+    "platform_id": 1,
+    "player_id": "76561198013819031",
+    "updated_at": "2017-02-10T01:14:03.000Z",
+    "intern_id": "freedomrl",
+    "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/04/04b1f7ad515bc281e1960b8b8daaa8124780645f_full.jpg"
+  },
+  "ranking": {
+    "10": {
+      "rating": 1374,
+      "tier_id": 15,
+      "division": 1,
+      "matches_played": 233,
+      "mu": 71.1997,
+      "sigma": "2.5",
+      "mmr": "63.6997"
+    },
+    "11": {
+      "rating": 1410,
+      "tier_id": 15,
+      "division": 1,
+      "matches_played": 584,
+      "mu": 72.9827,
+      "sigma": "2.5",
+      "mmr": "65.4827"
+    },
+    "12": {
+      "rating": 1110,
+      "tier_id": 0,
+      "division": 1,
+      "matches_played": 8,
+      "mu": 58.3322,
+      "sigma": "2.60547",
+      "mmr": "50.5158"
+    },
+    "13": {
+      "rating": 1151,
+      "tier_id": 15,
+      "division": 1,
+      "matches_played": 624,
+      "mu": 60.027,
+      "sigma": "2.5",
+      "mmr": "52.527"
+    }
+  },
+  "stats": {
+    "id": null,
+    "wins": 4876,
+    "goals": 18232,
+    "mpvs": 2654,
+    "saves": 9943,
+    "shots": 35026,
+    "assists": 4436
+  },
+  "image": "http://rltracker.pro/user_signatures/200.png?rand=p2tytp",
+  "image_negated": "http://rltracker.pro/user_signatures/200_n.png",
+  "url": "http://rltracker.pro/profiles/freedomrl/Steam"
+}

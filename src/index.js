@@ -1,22 +1,33 @@
-import rltn from './sources/rocket-league-tracker-network'
-import rltrackerPro from './sources/rltracker-pro'
+import { getInformation } from './external-actions';
+import RocketLeagueTrackerNetwork from './sources/rocket-league-tracker-network';
+import RLTrackerPro from './sources/rltracker-pro';
 
 export const TRACKER = {
   ROCKETLEAGUE_TRACKER_NETWORK: 'Rocket League Tracker Network',
   RLTRACKER_PRO: 'rltracker.pro',
-}
+};
 
-const getPlayerInformation = (platform, id, apiKey, tracker) => {
-  if (!apiKey) {
-    return Promise.reject('No api key')
-  }
-  switch (tracker) {
-    default:
-    case TRACKER.ROCKETLEAGUE_TRACKER_NETWORK:
-      return rltn.getPlayerInformation(platform, id, apiKey)
-    case TRACKER.RLTRACKER_PRO:
-      return rltrackerPro.getPlayerInformation(platform, id, apiKey)
-  }
-}
+const defaultOptions = {
+  tracker: TRACKER.RLTRACKER_PRO,
+  apiUrl: 'http://rltracker.pro/api/profile/get',
+};
 
-export default { getPlayerInformation }
+const trackers = {
+  [TRACKER.ROCKETLEAGUE_TRACKER_NETWORK]: RocketLeagueTrackerNetwork,
+  [TRACKER.RLTRACKER_PRO]: RLTrackerPro,
+};
+
+export default (options) => {
+  if (!options && !options.apiKey) {
+    throw new Error('You must provide an apiKey');
+  }
+
+  const { tracker, apiUrl, apiKey } = { ...defaultOptions, ...options };
+
+  if (!trackers[tracker]) {
+    throw new Error(`Invalid tracker: ${tracker}`);
+  }
+
+  return (platform, id) =>
+    getInformation(trackers[tracker], apiUrl, apiKey, platform, id);
+};

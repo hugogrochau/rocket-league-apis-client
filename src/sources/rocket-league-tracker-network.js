@@ -1,14 +1,9 @@
-import fetch from 'isomorphic-fetch'
-import querystring from 'querystring'
-
-const API_URL = 'https://20kiyaost7.execute-api.us-west-2.amazonaws.com/prod'
-
 const playlistMap = {
   'Ranked Duel 1v1': '1v1',
   'Ranked Doubles 2v2': '2v2',
   'Ranked Solo Standard 3v3': '3v3s',
   'Ranked Standard 3v3': '3v3',
-}
+};
 
 const rankMap = {
   'Grand Champion': 15,
@@ -27,7 +22,7 @@ const rankMap = {
   'Prospect II': 2,
   'Prospect I': 1,
   Unranked: 0,
-}
+};
 
 const divisionMap = {
   V: 5,
@@ -35,55 +30,40 @@ const divisionMap = {
   III: 3,
   II: 2,
   I: 1,
-}
+};
 
 /* extract ranks from api stats object */
 const getRanksFromInformation = (stats) => {
-  const ranks = {}
+  const ranks = {};
   stats.forEach((stat) => {
-    const playlist = playlistMap[stat.label]
+    const playlist = playlistMap[stat.label];
 
     if (playlist) {
-      ranks[playlist] = stat.value
+      ranks[playlist] = parseInt(stat.value, 10) + 1;
       // extract division and rank
-      const regex = /\[(\w{1,3})\]\s(.*)/
-      const matched = regex.exec(stat.subLabel)
-      ranks[`${playlist}_division`] = divisionMap[matched[1]]
-      ranks[`${playlist}_tier`] = rankMap[matched[2]]
+      const regex = /\[(\w{1,3})\]\s(.*)/;
+      const matched = regex.exec(stat.subLabel);
+      ranks[`${playlist}_division`] = parseInt(divisionMap[matched[1]], 10);
+      ranks[`${playlist}_tier`] = parseInt(rankMap[matched[2]], 10);
     }
-  })
-  return ranks
-}
+  });
+  return ranks;
+};
 
+const createRequest = (apiUrl, apiKey, platform, id) => {
+  const query = {
+    platform: 3 - platform,
+    name: id,
+  };
+  const headers = [{ 'X-API-KEY': apiKey }];
+  return { url: apiUrl, query, headers };
+};
 
-const getPlayerInformation = (platform, id, apiKey) =>
-  new Promise((resolve, reject) => {
-    const rltPlatform = 3 - platform
-    const query = querystring.stringify({
-      platform: rltPlatform,
-      name: id,
-    })
+const formatResponse = (data) => {
+  const info = getRanksFromInformation(data.stats);
+  info.name = data.platformUserHandle;
+  info.id = data.platformUserId;
+  return info;
+};
 
-    return fetch(`${API_URL}?${query}`, {
-      headers: { 'X-API-KEY': apiKey },
-    })
-    .then((res) => {
-      if (res.status >= 400) {
-        return reject(res)
-      }
-      try {
-        return res.json()
-      } catch (err) {
-        return reject(res)
-      }
-    })
-    .then((jsonData) => {
-      const info = getRanksFromInformation(jsonData.stats)
-      info.name = jsonData.platformUserHandle
-      info.id = jsonData.platformUserId
-      resolve(info)
-    })
-    .catch((err) => reject(err))
-  })
-
-export default { getPlayerInformation }
+export default { createRequest, formatResponse };

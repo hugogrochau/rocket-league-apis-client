@@ -1,13 +1,14 @@
 {
   "name": "rocket-league-apis-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Client for pulling data from various rocket league apis",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -s -D -d dist --ignore node_modules",
     "lint": "eslint src test",
     "lint:staged": "lint-staged",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test": "mocha  --compilers js:babel-register --reporter spec src/**/tests/*.test.js src/util/mocha-setup.js"
   },
   "files": [
     "dist/"
@@ -33,10 +34,12 @@
     "querystring": "^0.2.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.14.0",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
     "lint-staged": "^3.2.8",
+    "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "pre-commit": "^1.2.2"
   },

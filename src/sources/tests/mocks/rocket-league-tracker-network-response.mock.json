@@ -1,0 +1,957 @@
+{
+  "platformId": 3,
+  "platformName": "steam",
+  "platformShortName": "steam",
+  "platformUserId": "76561198013819031",
+  "platformUserHandle": "Freedom",
+  "stats": [
+    {
+      "label": "Ranked Duel 1v1",
+      "subLabel": "[I] Grand Champion",
+      "category": "Ranked Season",
+      "value": "1373",
+      "rank": null,
+      "percentile": null,
+      "displayValue": "1,373"
+    },
+    {
+      "label": "Ranked Doubles 2v2",
+      "subLabel": "[I] Grand Champion",
+      "category": "Ranked Season",
+      "value": "1409",
+      "rank": null,
+      "percentile": null,
+      "displayValue": "1,409"
+    },
+    {
+      "label": "Ranked Solo Standard 3v3",
+      "subLabel": "[I] Unranked",
+      "category": "Ranked Season",
+      "value": "1109",
+      "rank": null,
+      "percentile": null,
+      "displayValue": "1,110"
+    },
+    {
+      "label": "Ranked Standard 3v3",
+      "subLabel": "[I] Grand Champion",
+      "category": "Ranked Season",
+      "value": "1150",
+      "rank": null,
+      "percentile": null,
+      "displayValue": "1,150"
+    },
+    {
+      "label": "Un-Ranked",
+      "subLabel": "[I] Unranked",
+      "category": "Ranked Season",
+      "value": "1253",
+      "rank": null,
+      "percentile": null,
+      "displayValue": "1,253"
+    },
+    {
+      "label": "Tracker Score",
+      "subLabel": null,
+      "category": "Featured",
+      "value": "162022.65",
+      "rank": 150,
+      "percentile": 1,
+      "displayValue": "162,022.7"
+    },
+    {
+      "label": "Goal/Shot %",
+      "subLabel": null,
+      "category": "Featured",
+      "value": "52.05",
+      "rank": 257441,
+      "percentile": 47,
+      "displayValue": "52.1"
+    },
+    {
+      "label": "Wins",
+      "subLabel": null,
+      "category": "Featured",
+      "value": "4876",
+      "rank": 1838,
+      "percentile": 1,
+      "displayValue": "4,876"
+    },
+    {
+      "label": "Goals",
+      "subLabel": null,
+      "category": "Featured",
+      "value": "18232",
+      "rank": 263,
+      "percentile": 1,
+      "displayValue": "18,232"
+    },
+    {
+      "label": "Saves",
+      "subLabel": null,
+      "category": "Totals",
+      "value": "9943",
+      "rank": 1022,
+      "percentile": 1,
+      "displayValue": "9,943"
+    },
+    {
+      "label": "Shots",
+      "subLabel": null,
+      "category": "Totals",
+      "value": "35026",
+      "rank": 378,
+      "percentile": 1,
+      "displayValue": "35,026"
+    },
+    {
+      "label": "MVPs",
+      "subLabel": null,
+      "category": "Totals",
+      "value": "2654",
+      "rank": 931,
+      "percentile": 1,
+      "displayValue": "2,654"
+    },
+    {
+      "label": "Assists",
+      "subLabel": null,
+      "category": "Totals",
+      "value": "4436",
+      "rank": 2875,
+      "percentile": 1,
+      "displayValue": "4,436"
+    },
+    {
+      "label": "MVP/Win %",
+      "subLabel": null,
+      "category": "Totals",
+      "value": "54.43",
+      "rank": null,
+      "percentile": null,
+      "displayValue": "54.4"
+    }
+  ],
+  "tracking": [
+    {
+      "collectDate": "2017-01-19T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-21T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-23T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-24T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-25T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-26T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-27T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-28T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-29T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-30T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-01-31T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-01T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-02T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-03T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-04T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-05T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-06T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-07T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-08T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    },
+    {
+      "collectDate": "2017-02-09T00:00:00.0000000",
+      "stats": [
+        {
+          "label": "Tracker Score",
+          "value": "162022.65"
+        },
+        {
+          "label": "Goal/Shot %",
+          "value": "52.05"
+        },
+        {
+          "label": "Wins",
+          "value": "4876"
+        },
+        {
+          "label": "Goals",
+          "value": "18232"
+        },
+        {
+          "label": "Saves",
+          "value": "9943"
+        },
+        {
+          "label": "Shots",
+          "value": "35026"
+        },
+        {
+          "label": "MVPs",
+          "value": "2654"
+        },
+        {
+          "label": "Assists",
+          "value": "4436"
+        },
+        {
+          "label": "MVP/Win %",
+          "value": "54.43"
+        }
+      ]
+    }
+  ]
+}
