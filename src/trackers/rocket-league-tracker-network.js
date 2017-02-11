@@ -5,7 +5,7 @@ const playlistMap = {
   'Ranked Standard 3v3': '3v3',
 };
 
-const rankMap = {
+const tierMap = {
   'Grand Champion': 15,
   'Super Champion': 14,
   Champion: 13,
@@ -33,22 +33,20 @@ const divisionMap = {
 };
 
 /* extract ranks from api stats object */
-const formatRanks = (stats) => {
-  const ranks = {};
-  stats.forEach((stat) => {
-    const playlist = playlistMap[stat.label];
-
-    if (playlist) {
-      ranks[playlist] = parseInt(stat.value, 10) + 1;
-      // extract division and rank
-      const regex = /\[(\w{1,3})\]\s(.*)/;
-      const matched = regex.exec(stat.subLabel);
-      ranks[`${playlist}_division`] = parseInt(divisionMap[matched[1]], 10);
-      ranks[`${playlist}_tier`] = parseInt(rankMap[matched[2]], 10);
-    }
-  });
-  return ranks;
-};
+const formatRanks = (stats) => stats
+  .filter((stat) => playlistMap[stat.label]) // get only valid playlists
+  .map((stat) => {
+    const playlistName = playlistMap[stat.label];
+    const rank = parseInt(stat.value, 10);
+    // extract division and tier from ex: "[I] Grand Champion"
+    const [, division, tier] = /\[(\w{1,3})\]\s(.*)/.exec(stat.subLabel);
+    return {
+      [playlistName]: rank,
+      [`${playlistName}_division`]: divisionMap[division],
+      [`${playlistName}_tier`]: tierMap[tier],
+    };
+  })
+  .reduce((a, c) => ({ ...a, ...c })); // merge all ranks into one object
 
 const createRequest = (apiUrl, apiKey, platform, id) => {
   const query = {
