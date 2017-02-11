@@ -28,14 +28,17 @@ RLTrackerProClient(platform, id);
 * ROCKETLEAGUE_TRACKER_NETWORK = http://rocketleague.tracker.network
 
 # Player information schema
-```js
+```json
 {
-  "1v1": "1v1 rank",
-  "1v1_division": "1-5",
-  "1v1_tier": "1v1 tier (0-15 i.e. unranked to GC)",
-  "...": "same for 2v2,3v3,3v3s",
-  "name": "Player name",
-  "id": "Player id (xbox/psn handle or STEAM64 id)"
+  "player": {
+    "id": "Player id (xbox/psn handle or STEAM64 id)",
+    "platform": "Player platform",
+    "name": "Player name",
+    "1v1": "1v1 rank",
+    "1v1_division": "1-5",
+    "1v1_tier": "1v1 tier (0-15 i.e. unranked to GC)",
+    "...": "same for 2v2, 3v3, 3v3s"
+  }
 }
 ```
 

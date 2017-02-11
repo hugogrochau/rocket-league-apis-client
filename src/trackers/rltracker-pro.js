@@ -30,17 +30,26 @@ const createRequest = (apiUrl, apiKey, platform, id) => {
   return { url: apiUrl, query };
 };
 
-const handleResponse = (res) =>
-  res.json()
-    .then((data) => formatResponse(data))
+const handleResponse = (res) => {
+  if (res.status >= 400) {
+    if (res.status === 404) {
+      return Promise.reject({ data: res, message: 'PlayerNotFound' });
+    }
+    return Promise.reject({ data: res, message: 'UnknownError' });
+  }
+  return res.json()
+    .then((data) => data)
+    // TODO: study possible rltracker errors
     .catch((err) => ({ data: err, message: 'UnknownError' }));
-
-
-export const formatResponse = (data) => {
-  const info = formatRanks(data.ranking);
-  info.name = data.player.nickname;
-  info.id = data.player.player_id;
-  return info;
 };
 
-export default { createRequest, handleResponse };
+const formatPlayerResponse = (data) => ({
+  player: {
+    id: data.player.player_id,
+    platform: parseInt(data.player.platform_id, 10) - 1,
+    name: data.player.nickname,
+    ...formatRanks(data.ranking),
+  },
+});
+
+export default { createRequest, handleResponse, formatPlayerResponse };

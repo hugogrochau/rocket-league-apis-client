@@ -1,4 +1,4 @@
-import RocketLeagueTrackerNetwork, { formatResponse } from '../rocket-league-tracker-network';
+import RocketLeagueTrackerNetwork from '../rocket-league-tracker-network';
 import mockResponse from './mocks/rocket-league-tracker-network-response.mock.json';
 import formattedInformation from './mocks/rocket-league-tracker-network-formatted-information.mock.json';
 
@@ -24,7 +24,7 @@ describe('Rocket League Tracker Network', () => {
 
   describe('formatResponse', () => {
     it('Should properly format the response', () =>
-      expect(formatResponse(mockResponse)).to.deep.equal(formattedInformation)
+      expect(RocketLeagueTrackerNetwork.formatPlayerResponse(mockResponse)).to.deep.equal(formattedInformation)
     );
   });
 });

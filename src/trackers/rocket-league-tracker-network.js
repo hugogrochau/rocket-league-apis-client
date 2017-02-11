@@ -33,7 +33,7 @@ const divisionMap = {
 };
 
 /* extract ranks from api stats object */
-const getRanksFromInformation = (stats) => {
+const formatRanks = (stats) => {
   const ranks = {};
   stats.forEach((stat) => {
     const playlist = playlistMap[stat.label];
@@ -55,6 +55,9 @@ const createRequest = (apiUrl, apiKey, platform, id) => {
     platform: 3 - platform,
     name: id,
   };
+
+
+  // 3 - platform = p => -platform = p - 3 => platform = -p + 3 = 3 - p
   const headers = { 'X-API-KEY': apiKey };
   return { url: apiUrl, query, headers };
 };
@@ -66,7 +69,7 @@ const handleResponse = (res) =>
         if (data === 'Bad Request') return reject({ message: 'InputError' });
         try {
           const jsonData = JSON.parse(data);
-          resolve(formatResponse(jsonData));
+          resolve(jsonData);
         } catch (e) {
           reject({ data, message: 'UnknownError' });
         }
@@ -74,11 +77,13 @@ const handleResponse = (res) =>
       .catch((err) => reject({ data: err, message: 'UnknownError' }));
   });
 
-export const formatResponse = (data) => {
-  const info = getRanksFromInformation(data.stats);
-  info.name = data.platformUserHandle;
-  info.id = data.platformUserId;
-  return info;
-};
+const formatPlayerResponse = (data) => ({
+  player: {
+    id: data.platformUserId,
+    platform: 3 - parseInt(data.platformId, 10),
+    name: data.platformUserHandle,
+    ...formatRanks(data.stats),
+  },
+});
 
-export default { createRequest, handleResponse };
+export default { createRequest, handleResponse, formatPlayerResponse };

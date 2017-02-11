@@ -1,6 +1,6 @@
-import { getInformation } from './requests';
-import RocketLeagueTrackerNetwork from './sources/rocket-league-tracker-network';
-import RLTrackerPro from './sources/rltracker-pro';
+import { getPlayerInformation } from './requests';
+import RocketLeagueTrackerNetwork from './trackers/rocket-league-tracker-network';
+import RLTrackerPro from './trackers/rltracker-pro';
 
 export const TRACKER = {
   ROCKETLEAGUE_TRACKER_NETWORK: 'Rocket League Tracker Network',
@@ -29,5 +29,5 @@ export default (options) => {
   }
 
   return (platform, id) =>
-    getInformation(trackers[tracker], apiUrl, apiKey, platform, id);
+    getPlayerInformation(trackers[tracker], apiUrl, apiKey, platform, id);
 };
