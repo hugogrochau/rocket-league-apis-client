@@ -43,4 +43,4 @@ RLTrackerProClient(platform, id);
 ```
 
 ## Authors
-* @hugogrochau
+* [hugogrochau](http://hugo.grochau.com)
