@@ -38,7 +38,10 @@ const formatRanks = (stats) => stats
   .map((stat) => {
     const playlistName = playlistMap[stat.label];
     const rank = parseInt(stat.value, 10);
-    // extract division and tier from ex: "[I] Grand Champion"
+    /* extract division and tier. Example:
+      in: '[I] Grand Champion'
+      out: ['I', 'Grand Champion']
+    */
     const [, division, tier] = /\[(\w{1,3})\]\s(.*)/.exec(stat.subLabel);
     return {
       [playlistName]: rank,
@@ -46,7 +49,8 @@ const formatRanks = (stats) => stats
       [`${playlistName}_tier`]: tierMap[tier],
     };
   })
-  .reduce((a, c) => ({ ...a, ...c })); // merge all ranks into one object
+  // merge all ranks into one object
+  .reduce((accumulator, current) => ({ ...accumulator, ...current }), {});
 
 const createRequest = (apiUrl, apiKey, platform, id) => {
   const query = {
@@ -54,8 +58,6 @@ const createRequest = (apiUrl, apiKey, platform, id) => {
     name: id,
   };
 
-
-  // 3 - platform = p => -platform = p - 3 => platform = -p + 3 = 3 - p
   const headers = { 'X-API-KEY': apiKey };
   return { url: apiUrl, query, headers };
 };
