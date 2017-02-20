@@ -1,6 +1,6 @@
 {
   "name": "rocket-league-apis-client",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Client for pulling data from various rocket league apis",
   "main": "dist/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "pre-commit": "lint:staged",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hugogrochau/rocket-league-rank-apis-client.git"
+    "url": "git+https://github.com/hugogrochau/rocket-league-apis-client.git"
   },
   "author": "Hugo Grochau <hugo@grochau.com>",
   "license": "MIT",
