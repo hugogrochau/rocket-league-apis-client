@@ -35,6 +35,9 @@ const handleResponse = (res) => {
     if (res.status === 404) {
       return Promise.reject({ data: res, message: 'PlayerNotFound' });
     }
+    if (res.status === 524) {
+      return Promise.reject({ data: res, message: 'TimeoutError' });
+    }
     return Promise.reject({ data: res, message: 'UnknownError' });
   }
   return res.json()
