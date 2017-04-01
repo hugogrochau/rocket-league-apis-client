@@ -11,7 +11,7 @@ import rankApis, { TRACKER } from 'rocket-league-rank-apis-client'
 
 const API_KEY = 'abc123';
 const options = {
-  tracker: TRACKERS.RLTRACKER_PRO,
+  tracker: TRACKER.RLTRACKER_PRO,
   apiUrl: 'http://rltracker.pro/api/profile/get',
   apiKey: API_KEY,
 };
