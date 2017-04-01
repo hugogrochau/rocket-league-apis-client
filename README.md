@@ -7,7 +7,7 @@ Client for pulling data from various rocket league apis
 
 # Usage
 ```js
-import rankApis, { TRACKERS } from 'rocket-league-rank-apis-client'
+import rankApis, { TRACKER } from 'rocket-league-rank-apis-client'
 
 const API_KEY = 'abc123';
 const options = {
